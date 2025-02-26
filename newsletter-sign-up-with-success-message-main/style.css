@@ -1,0 +1,217 @@
+/* 🌟 Global styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 50px;
+  gap: 40px;
+}
+.image-container img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: hsl(234, 29%, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: hsl(235, 18%, 26%);
+}
+
+/* 📩 Sign-up form styling */
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 900px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.signup-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.content {
+  width: 50%;
+}
+
+h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.description {
+  color: hsl(235, 18%, 26%);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+p, ul {
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+}
+
+/* ✅ Riktig styling for listepunkter og tekst */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 35px; /* 📏 Avstand mellom ikon og tekst */
+  margin-bottom: 15px;
+  color: hsl(235, 18%, 26%);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul li::before {
+  content: url('assets/images/icon-list.svg'); /* 🖼️ Riktig ikon (sjekk filsti) */
+  position: absolute;
+  left: 0;
+  top: 3px; /* 📐 Justerer vertikal plassering */
+  width: 16px; /* 🎯 Riktig størrelse på ikonet */
+  height: 16px;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ✉️ INPUT-STIL */
+input[type="email"] {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid hsl(235, 18%, 26%);
+  font-size: 16px;
+}
+input[type="email"]:focus {
+  outline: none;
+  border: 2px solid hsl(4, 100%, 67%);
+  box-shadow: 0 0 10px rgba(255, 98, 87, 0.5);
+}
+/* 🖱️ KNAPP-STIL */
+button {
+  width: 100%;
+  padding: 18px;
+  margin-top: 20px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+/* 🚨 FEILMELDING-STIL */
+.error-message {
+  color: hsl(4, 100%, 67%);
+  font-size: 0.9rem;
+  margin-top: -10px;
+  display: none;
+}
+input.error {
+  border: 2px solid hsl(4, 100%, 67%);
+  background-color: rgba(255, 98, 87, 0.1);
+}
+
+input.error:focus {
+  box-shadow: 0 0 10px rgba(255, 98, 87, 0.5);
+}
+
+/* ✨ Feilmelding med fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-5px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.error-message.show {
+  display: block;
+  animation: fadeIn 0.3s forwards;
+}
+
+
+/* 🎉 Modal for suksess */
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal button {
+  width: 100%;
+}
+
+/* 📱 Responsivt design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column-reverse;
+  }
+
+  .success-container h2 {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+  
+  
+  
+  
